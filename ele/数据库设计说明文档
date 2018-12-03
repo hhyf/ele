@@ -1,0 +1,68 @@
+1、管理员信息表：(adminList)
+    _id:唯一标识
+    admainName : 用户名
+    adminPassword : 密码
+    注册时间 ： regTime
+    lastTime : 最后登录时间
+
+2、管理员日志（adminLog）
+    _id
+    adminName : 用户名
+    logType ： 1：登录 2：添加了商品 3：添加了店铺
+    addTime : 创建的时间
+    detail : 详情说明
+
+
+3、店铺类别 （shopTypeList）
+    _id
+    shopTypeName : 店铺类别名称
+    shopTypePic : 店铺类别图片
+    addTime ：店铺类别添加时间
+    orderNum ： 店铺排序，数字越大越靠前
+
+4、店铺列表(shopList)
+    _id
+    shopName ： 店铺名称
+    shopPic : 店铺图片
+    shopTypeId ： 店铺类别的Id
+    addTime : 提交时间
+    isRecomment : 是否推荐
+    主营：flavors
+    优惠活动：activities
+    地址 ： address
+    评价：rating
+    销量 ：recent_num
+    起送价 ：minimum_amount
+    配送速度 ：order_lead_time
+    配送费 ：dispatching_fee
+    人均消费 :
+    商家服务 ：
+
+
+
+5、商品类别(goodsTypeList)
+    _id
+    goodsTypeName : 商品类别名称
+    shopId : 店铺的id
+
+6、商品信息(goodsList)
+    _id
+    goodsName : 商品名称
+    goodsPic ： 商品图片
+    goodsPrice ：商品单价
+    goodsTypeId ：商品类别id
+    shopId ： 店铺id
+    isHot ：是否热销
+
+7、用户列表（userList）
+    _id
+    phoneId : 手机号
+    goldNum : 金币数量，注册时给一定的金币，不够时进行充值
+    regTime : 注册时间
+    lastTime ： 最后登录时间
+
+8、手机验证码
+    _id
+    phoneId : 手机号
+    code ： 验证码（用户点击获得验证码，后台生成验证码并填写在填写验证码的表单中）
+    addTime : 设置验证码的过期时间，进行判断
